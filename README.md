@@ -1,6 +1,6 @@
 # HudsonValleyHikes
 
-If you find yourself in New York's beautiful Hudson Valley region and fancy a light trek or tough climb, use this app to find the perfect hiking spot for you and your friends or family. No matter which side of the Hudson River you end up on, a great hike awaits! 
+If you find yourself in New York's beautiful Hudson Valley region and fancy a light trek or tough climb, use this app to find the perfect hiking spot and some details about it for you and your friends or family. No matter which side of the Hudson River you end up on, a great hike awaits! 
 
 ## Installation
 
@@ -20,7 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Type 'y' to see a list of the most popular hiking spots in the Hudson Valley and nearby areas.
+2. Enter the number associated with one of the hike's on the list to see additional details about that hike, including its location, the number of reviews it has received, and some testimonials (if they are available) from hikers who have been to that hiking spot.
 
 ## Development
 
