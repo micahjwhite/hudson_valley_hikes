@@ -6,7 +6,7 @@ class HudsonValleyHikes::Scraper
         hikes = doc.css("div.listing")
         hikes.each do |hike|
             name = hike.css("h2").text
-            location = hike.css("var.parent-name-and-distance span").text.split(",")[0]
+            location = hike.css("var.parent-name-and-distance span").text.gsub(/\d.*$/, "")
             number_of_reviews = hike.css("span.more a").text.strip
             reviews = hike.css("div.review_snippet").text.gsub('.”“', '.” “')
         HudsonValleyHikes::Hike.new(name, location, number_of_reviews, reviews) 
