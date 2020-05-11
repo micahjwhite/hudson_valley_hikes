@@ -2,8 +2,6 @@ require 'pry'
 
 class HudsonValleyHikes::CLI
     
-    attr_accessor 
-    
     def call
         render_ascii_art
         greet_user
@@ -13,7 +11,6 @@ class HudsonValleyHikes::CLI
         select_hike
         select_another_hike
         goodbye
-
     end
 
     def render_ascii_art
@@ -29,15 +26,6 @@ class HudsonValleyHikes::CLI
     end
 
     def get_user_interest
-        # input = String.new
-        # until input == "y"
-        #     input = gets.strip.downcase
-        # end
-        # case
-        # when input == "y"
-        #     list_hikes
-        # when input == "n"
-        #     goodbye
         input = gets.strip.downcase 
         if input == "y" || input == "yes" 
             list_hikes
@@ -79,12 +67,12 @@ class HudsonValleyHikes::CLI
 
     def select_another_hike
         puts "\nWould you like to see the list of the Hudson Valley's top hikes again? Enter 'y' for yes or 'e' to exit."
-        input = gets.strip
+        input = gets.strip.downcase
         case 
-        when input == "y" || input == "Y" || input == "yes" || input == "YES"
+        when input == "y" || input == "yes" 
             list_hikes
             select_hike
-        when input == "e" || input == "E" || input == "exit" || input = "EXIT"
+        when input == "e" || input == "exit"
             goodbye
         end
     end
