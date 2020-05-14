@@ -39,7 +39,7 @@ class HudsonValleyHikes::CLI
 
     def list_hikes
         puts ""
-        HudsonValleyHikes::Hike.all.each.with_index(1) do |hike, index|
+        HudsonValleyHikes::Hike.all.sort_by!{|hike| hike.name}.each.with_index(1) do |hike, index|
             puts "#{index}. #{hike.name}"
         end
     end
@@ -82,3 +82,4 @@ class HudsonValleyHikes::CLI
         exit!
     end
 end
+
